@@ -1,30 +1,41 @@
-try:
-    firstNumber = float(input("Enter First Number: "))
-except ValueError:
-    print("Invalid input for the first number. Please enter a numeric value.")
-    exit()
+def get_numeric_input(prompt):
+    """Prompts the user for a numeric value and handles invalid input."""
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid input. Please enter a numeric value.")
 
-Operation = input("Enter Operation (+, -, *, /): ")
+def get_operation():
+    """Prompts the user for a valid operation."""
+    valid_operations = ["+", "-", "*", "/"]
+    while True:
+        op = input(f"Enter Operation ({', '.join(valid_operations)}): ")
+        if op in valid_operations:
+            return op
+        else:
+            print("Invalid Operation. Please choose from the allowed options.")
 
-try:
-    secondNumber = float(input("Enter Second Number: "))
-except ValueError:
-    print("Invalid input for the second number. Please enter a numeric value.")
-    exit()
+def main():
+    """Main function to run the calculator."""
+    first_number = get_numeric_input("Enter First Number: ")
+    operation = get_operation()
+    second_number = get_numeric_input("Enter Second Number: ")
 
-if Operation == "+":
-    print("Output is", firstNumber + secondNumber)
+    if operation == "+":
+        result = first_number + second_number
+    elif operation == "-":
+        result = first_number - second_number
+    elif operation == "*":
+        result = first_number * second_number
+    elif operation == "/":
+        if second_number == 0:
+            print("Error: Division by zero is not defined")
+            return  # Exit the function
+        else:
+            result = first_number / second_number
 
-elif Operation == "-":
-    print("Output is", firstNumber - secondNumber)
+    print(f"Output is {result}")
 
-elif Operation == "*":
-    print("Output is", firstNumber * secondNumber)
-
-elif Operation == "/":
-    if secondNumber == 0:
-        print("Error: Division by zero is not possible.")
-    else:
-        print("Output is", firstNumber / secondNumber)
-else:
-    print("Invalid Operation")
+if __name__ == "__main__":
+    main()
