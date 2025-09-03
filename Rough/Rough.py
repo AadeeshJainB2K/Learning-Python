@@ -31,7 +31,7 @@ def main():
     elif operation == "/":
         if second_number == 0:
             print("Error: Division by zero is not defined")
-            return  # Function se bahar nikal jao
+            return  # Function se bahar nikal jaa
         else:
             result = first_number / second_number
 
