@@ -1,5 +1,5 @@
 def get_numeric_input(prompt):
-    """User se ek numeric value leta hai aur galat input ko handle karta hai."""
+    #User se ek numeric value leta hai aur galat input ko handle karta hai."""
     while True:
         try:
             return float(input(prompt))
@@ -7,7 +7,7 @@ def get_numeric_input(prompt):
             print("Invalid input. Please enter a numeric value.")
 
 def get_operation():
-    """User se ek valid operation leta hai."""
+    #User se ek valid operation leta hai.
     valid_operations = ["+", "-", "*", "/"]
     while True:
         op = input(f"Enter Operation ({', '.join(valid_operations)}): ")
@@ -17,7 +17,7 @@ def get_operation():
             print("Invalid Operation. Please choose from the allowed options.")
 
 def main():
-    """Calculator chalaane ke liye yeh main function hai."""
+    #Calculator chalaane ke liye yeh main function hai.
     first_number = get_numeric_input("Enter First Number: ")
     operation = get_operation()
     second_number = get_numeric_input("Enter Second Number: ")
