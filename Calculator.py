@@ -11,7 +11,10 @@ elif b == "*":
     f = a * c
     print(f)
 elif b == "/":
-    g = a / c
-    print(g)
+    if (c == 0):
+        print("not defined")
+    else :
+        g = a / c
+        print(g)
 else:
     print("Not Define")
