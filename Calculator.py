@@ -1,20 +1,20 @@
-a = (int(input("Enter First Number")))
-b = (input("Enter Opreation Which You Want To Do ?"))
-c = (int(input("Enter Second Number")))
-if b == "+":
-    d = a + c
+firstNumber = (int(input("Enter First Number ")))
+operation = (input("Enter OprefirstNumbertion Which You WfirstNumbernt To Do ? "))
+secondNumber = (int(input("Enter Second Number ")))
+if operation == "+":
+    d = firstNumber + secondNumber
     print(d)
-elif b == "-":
-    e = a - c
+elif operation == "-":
+    e = firstNumber - secondNumber
     print(e)
-elif b == "*":
-    f = a * c
+elif operation == "*":
+    f = firstNumber * secondNumber
     print(f)
-elif b == "/":
-    if (c == 0):
+elif operation == "/":
+    if (secondNumber == 0):
         print("not defined")
     else :
-        g = a / c
+        g = firstNumber / secondNumber
         print(g)
 else:
     print("Not Define")
