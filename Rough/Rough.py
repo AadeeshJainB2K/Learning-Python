@@ -19,3 +19,4 @@ class11 = {
 class11["students"]["Anshita"].update({"age":17})
 
 print (class11["students"]["Anshita"]["age"])
+print (class11["teachers"]["Jeetu"]["subject"])
