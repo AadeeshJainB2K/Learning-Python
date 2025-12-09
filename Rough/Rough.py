@@ -12,8 +12,8 @@ class11 = {
     "teachers": {
         "Jeetu": {"subject": "Maths",
                   "age": 35 , "gender": "M" } ,
-        "Neha": {"subject": "English",
-                 "age": 29 , "gender": "F" },
+        "Kavya": {"subject": "English",
+                 "age": 22 , "gender": "F" },
 }
 }
 class11["students"]["Anshita"].update({"age":17})
