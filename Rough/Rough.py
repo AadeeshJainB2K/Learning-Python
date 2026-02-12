@@ -1,22 +1,5 @@
-class11 = {
-    "students": {
-        "Aadeesh": {"age": 15,
-                    "grade": "A" , 
-                    "gender": "M" ,
-                    "DoB" : "16th January 2010" },
-        "Anshita": {"age": 16, 
-                    "grade": "A" , 
-                    "gender": "F" ,
-                    "DoB" : "13th December 2009" }
-    },
-    "teachers": {
-        "Jeetu": {"subject": "Maths",
-                  "age": 35 , "gender": "M" } ,
-        "Kavya": {"subject": "English",
-                 "age": 22 , "gender": "F" },
-}
-}
-class11["students"]["Anshita"].update({"age":17})
-
-print (class11["students"]["Anshita"]["age"])
-print (class11["teachers"]["Jeetu"]["subject"])
+s =  input("Enter a string to check if it is a palindrome :")
+if (s==s[::-1]):
+    print("The string is a palindrome")
+else:
+    print("The string is not a palindrome")
